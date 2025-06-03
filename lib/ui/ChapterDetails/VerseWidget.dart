@@ -13,7 +13,7 @@ class VerseWidget extends StatelessWidget {
       padding: EdgeInsets.all(8),
       child: Text(
         '$content {${index + 1}}',
-        style: TextStyle(fontSize: 20),
+        style: Theme.of(context).textTheme.bodyMedium,
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.center,
       ),

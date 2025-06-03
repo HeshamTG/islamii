@@ -127,6 +127,10 @@ class QuraanTap extends StatelessWidget {
           child: Image.asset('assets/images/quran_header_icn.png'),
           flex: 1,
         ),
+        Text(
+          'Chapter Name',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
         Expanded(
           flex: 3,
           child: ListView.separated(
@@ -134,7 +138,7 @@ class QuraanTap extends StatelessWidget {
               return ChapterTitleWidget(names[index], index);
             },
             separatorBuilder: (context, index) => Container(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).dividerColor,
               width: double.infinity,
               height: 2,
               margin: EdgeInsets.symmetric(horizontal: 64),
