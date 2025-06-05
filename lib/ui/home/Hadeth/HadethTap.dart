@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamii/ui/home/Hadeth/HadethTitleWidget.dart';
 
 import 'Hadeth.dart';
@@ -32,7 +33,7 @@ class _HadethTapState extends State<HadethTap> {
               width: 2,
             ))),
             child: Text(
-              'Hadeth',
+              AppLocalizations.of(context)!.hadeth,
               style: Theme.of(context).textTheme.titleMedium,
             )),
         Expanded(
