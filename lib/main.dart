@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamii/ui/ChapterDetails/ChapterDetailsScreen.dart';
 import 'package:islamii/ui/HadethDetails/HadethDetailsScreen.dart';
+import 'package:islamii/ui/MyThemeData.dart';
 import 'package:islamii/ui/home/HomeScreen.dart';
 
 void main() {
@@ -22,35 +23,9 @@ class MyApp extends StatelessWidget {
       },
       initialRoute: HomeScreen.routeName,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        cardTheme: CardTheme(
-          color: Colors.white,
-        ),
-        scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.transparent,
-          centerTitle: true,
-          titleTextStyle: TextStyle(
-            color: Colors.black,
-            fontSize: 28,
-          ),
-          iconTheme: IconThemeData(color: Colors.black),
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-            selectedItemColor: Colors.black,
-            unselectedItemColor: Colors.white,
-            selectedIconTheme: IconThemeData(
-              size: 32,
-            )),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color(0xffB7935F),
-          primary: Color(0xffB7935F),
-          secondary: Color(0xff87B7935F),
-          onPrimary: Colors.white,
-          onSecondary: Colors.black,
-        ),
-        useMaterial3: true,
-      ),
+      theme: MyThemeData.lightTheme,
+      darkTheme: MyThemeData.darkTheme,
+      themeMode: ThemeMode.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: const [Locale('en'), Locale('ar')],
       locale: Locale('ar'),

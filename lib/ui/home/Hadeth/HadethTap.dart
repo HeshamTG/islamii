@@ -34,7 +34,7 @@ class _HadethTapState extends State<HadethTap> {
             ))),
             child: Text(
               AppLocalizations.of(context)!.hadeth,
-              style: TextStyle(fontSize: 24),
+              style: Theme.of(context).textTheme.titleMedium,
             )),
         Expanded(
           flex: 3,
@@ -45,7 +45,7 @@ class _HadethTapState extends State<HadethTap> {
                     return HadethTitleWidget(allAhadeth[index]);
                   },
                   separatorBuilder: (context, index) => Container(
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).dividerColor,
                         width: double.infinity,
                         height: 2,
                         margin: EdgeInsets.symmetric(horizontal: 64),

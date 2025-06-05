@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../MyThemeData.dart';
 import '../home/Hadeth/Hadeth.dart';
 
 class HadethDetailsScreen extends StatelessWidget {
@@ -11,7 +12,10 @@ class HadethDetailsScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg3.png'), fit: BoxFit.fill)),
+              image: AssetImage(MyThemeData.isDarkEnabled
+                  ? 'assets/images/home_dark_background.png'
+                  : 'assets/images/bg3.png'),
+              fit: BoxFit.fill)),
       child: Scaffold(
           appBar: AppBar(
             title: Text(args.title),
@@ -24,10 +28,7 @@ class HadethDetailsScreen extends StatelessWidget {
                   child: Text(
                     textAlign: TextAlign.center,
                     args.content,
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
+                      style: Theme.of(context).textTheme.bodyMedium),
                 ),
               ),
             ),
