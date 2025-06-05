@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamii/ui/ChapterDetails/ChapterDetailsScreen.dart';
 import 'package:islamii/ui/HadethDetails/HadethDetailsScreen.dart';
 import 'package:islamii/ui/home/HomeScreen.dart';
@@ -50,6 +51,9 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: const [Locale('en'), Locale('ar')],
+      locale: Locale('ar'),
       // home: HomeScreen.routeName,
     );
   }
